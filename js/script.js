@@ -4,6 +4,8 @@ const stars = document.querySelectorAll(".stars i");
 let submit = document.getElementById("submit");
 let reset = document.getElementById("reset");
 
+
+
 stars.forEach((star, index) => {
   star.addEventListener("click", () => {
     // Remove 'selected' class from all stars
@@ -15,6 +17,9 @@ stars.forEach((star, index) => {
     }
   });
 });
+
+
+
 
 function submitBtn() {
   const selectedStars = document.querySelectorAll(".stars i.selected");
@@ -29,7 +34,7 @@ function submitBtn() {
   } 
   else {
     reviewShow.style.display = "block";
-
+    
     let starsHTML = "";
     selectedStars.forEach((star) => {
       starsHTML += `<i class="fa-solid fa-star gold"></i>`;
@@ -38,8 +43,13 @@ function submitBtn() {
     reviewShow.innerHTML = `${starsHTML} <br> <br> ${reviewInput.value}`;
 
     reviewShow.style.opacity = "1";
+    
+    reviewInput.value = "";
+    stars.forEach((s) => s.classList.remove("selected"));
   }
 }
+
+
 
 let resetBtn = () => {
   reviewShow.style.transition = "opacity 0.4s ease";
