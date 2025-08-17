@@ -105,6 +105,7 @@ textarea::placeholder{
 #reset:hover{
     background: #d1d5db;
 }
+
 #submit{
     background: #2563eb;
     color: white;
@@ -118,6 +119,7 @@ textarea::placeholder{
     font-family: system-ui;
     cursor: pointer;
 }
+
 #submit:hover{
     background: #1d4ed8;
 }
